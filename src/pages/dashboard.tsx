@@ -26,7 +26,7 @@ const options = {
     enabled: false,
   },
   xaxis: {
-    type: "datetime",
+    // type: "datetime",
     axisBorder: {
       color: theme.colors.gray[600],
     },
@@ -34,27 +34,34 @@ const options = {
       color: theme.colors.gray[600],
     },
     categories: [
-      "2021-03-18T00:00:00.000Z",
-      "2021-03-19T00:00:00.000Z",
-      "2021-03-20T00:00:00.000Z",
-      "2021-03-21T00:00:00.000Z",
-      "2021-03-22T00:00:00.000Z",
-      "2021-03-23T00:00:00.000Z",
-      "2021-03-24T00:00:00.000Z",
+      // "2021-03-18T00:00:00.000Z",
+      // "2021-03-19T00:00:00.000Z",
+      // "2021-03-20T00:00:00.000Z",
+      // "2021-03-21T00:00:00.000Z",
+      // "2021-03-22T00:00:00.000Z",
+      // "2021-03-23T00:00:00.000Z",
+      // "2021-03-24T00:00:00.000Z",
+      "23 Mar",
+      "24 Mar",
+      "25 Mar",
+      "26 Mar",
+      "27 Mar",
+      "28 Mar",
+      "29 Mar",
     ],
   },
   fill: {
     opacity: 0.3,
     type: "gradient",
     gradient: {
-      shade: 'dark', 
+      shade: "dark",
       opacityFrom: 0.7,
       opacityTo: 0.3,
-    }
-  }
+    },
+  },
 };
 
-const series = [{ name: "series1", data: [31, 120, 10, 28, 51, 61, 109] }];
+const series = [{ name: "teste", data: [31, 120, 10, 28, 51, 61, 109] }];
 
 export default function Dashboard() {
   return (
@@ -76,7 +83,6 @@ export default function Dashboard() {
               Taxa de abertura
             </Text>
             <Chart type="area" height={160} options={options} series={series} />
-
           </Box>
         </SimpleGrid>
       </Flex>
